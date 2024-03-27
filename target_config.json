@@ -1,0 +1,230 @@
+{
+  "clusterProperties": [
+    {
+      "goid": "f6a6351f12902eca11c2df6d22da76c7",
+      "name": "environment",
+      "checksum": "902c7d5d9b9b02c9767f21abad5807e9dfdbf0c6",
+      "description": "",
+      "hiddenProperty": false,
+      "value": "docker-3"
+    },
+    {
+      "goid": "9bb69ea5a177e22269c734629d5ab67b",
+      "name": "io.httpMaxConcurrency",
+      "checksum": "a146d99658e9ccd12b19813adb5dde0258732a40",
+      "description": "Maximum number of concurrent active HTTP connections.  This is a hard upper limit.",
+      "hiddenProperty": false,
+      "value": "750"
+    },
+    {
+      "goid": "d2431d92bbbd2a8ffcd64af21dfc0e50",
+      "name": "io.xmlPartMaxBytes",
+      "checksum": "82701a0aed3e80c611a44e13ceb1c8995e6aaddf",
+      "description": "Maximum number of bytes permitted in the XML part of a message, or 0 for unlimited (Integer)",
+      "hiddenProperty": false,
+      "value": "0"
+    },
+    {
+      "goid": "5dbeffa1fbfca16ef0d0ec3b54568199",
+      "name": "x-hello",
+      "checksum": "cb7f9659131c22232a14a2a2ac533375fa59a202",
+      "description": "",
+      "hiddenProperty": false,
+      "value": "Hello docker!"
+    }
+  ],
+  "encassConfigs": [
+    {
+      "goid": "6975522830b7415b2b387cdbf97b1f5c",
+      "guid": "0a0322ec-b100-4c74-a420-b2a4abb00ef5",
+      "name": "Add Audit",
+      "checksum": "486479fe5edf5d699b8c8900eb98248ddec8c9ce",
+      "policyName": "Add Audit",
+      "encassArgs": [],
+      "encassResults": [],
+      "properties": [
+        {
+          "name": "allowTracing",
+          "value": "false"
+        },
+        {
+          "name": "paletteFolder",
+          "value": "customAssertions"
+        },
+        {
+          "name": "passMetricsToParent",
+          "value": "false"
+        }
+      ]
+    }
+  ],
+  "internalUsers": [
+    {
+      "goid": "6975522830b7415b2b387cdbf9709368",
+      "name": "christian",
+      "login": "christian",
+      "checksum": "2832b8fde6b85bebc238069fbd580ced737bcc6b",
+      "password": "$6$RrxHqwaQ8cTygbgz$QNAwEccC2DmcZbLFdB0AUTfiDZKoHqAZ5b6M.g9VgExqB2iwE8citqkwGXLrY3wvZ30Sa1eOgK.AYctfNHXwX0",
+      "firstName": "Christian",
+      "lastName": "OBERLE",
+      "email": "christian.oberle@broadcom.com",
+      "memberOf": []
+    },
+    {
+      "goid": "242f538bb4fb3427f88599e31fb714e6",
+      "name": "devtest",
+      "login": "devtest",
+      "checksum": "e85c3358257c7783a51bb4cbb3068515b7463ca1",
+      "password": "$6$LyddL0aJu486atjE$WcA.u6AyNxQ0IWdapreYGSeQPt2TyGWoAw1uI7xiirW/v.tWAuwQ21DRnDDsyzJoOS1tkz87MIFpm8KF/xRiG/",
+      "firstName": "Lisa",
+      "lastName": "Oberle",
+      "email": "",
+      "memberOf": []
+    }
+  ],
+  "jdbcConnections": [
+    {
+      "goid": "9bb69ea5a177e22269c734629dde924c",
+      "name": "Test",
+      "checksum": "64766a5bfc92a73610c79838f3bea7da18bf3707",
+      "enabled": true,
+      "driverClass": "com.l7tech.jdbc.mysql.MySQLDriver",
+      "jdbcUrl": "jdbc:mysql://192.168.1.60:3307/test",
+      "username": "test_user",
+      "password": "JEw3RXYwMiToGbZYaIbkjNSZcEndM0sOmDMxA6YYBKFRrmXubPDPIA==",
+      "minPoolSize": 3,
+      "maxPoolSize": 15,
+      "properties": [
+        {
+          "name": "EnableCancelTimeout",
+          "value": "true"
+        }
+      ]
+    }
+  ],
+  "ldaps": [
+    {
+      "goid": "576f8676c053f12d03f4087d1cad0690",
+      "name": "localhostApache",
+      "checksum": "03d3302f83cff4d2fe8749256914bbda108cdc04",
+      "ldapUrls": [
+        "ldap://192.168.1.60:10389"
+      ],
+      "ldapsClientAuthEnabled": false,
+      "searchBase": "ou=system",
+      "writable": false,
+      "bindDn": "uid=admin,ou=system",
+      "bindPassword": "JEw3RXYwMiQGX8yQ3BTyLD9DggEFRMlqORB6H2p9qcOI/5pJvyWYKg==",
+      "userMappings": [
+        {
+          "objClass": "inetOrgPerson",
+          "nameAttrName": "cn",
+          "loginAttrName": "uid",
+          "passwdAttrName": "userPassword",
+          "firstNameAttrName": "givenName",
+          "lastNameAttrName": "sn",
+          "emailNameAttrName": "mail",
+          "kerberosAttrName": "uid",
+          "userCertAttrName": "userCertificate;binary",
+          "passwdType": {
+            "val": 0
+          }
+        }
+      ],
+      "groupMappings": [
+        {
+          "objClass": "posixGroup",
+          "nameAttrName": "cn",
+          "memberAttrName": "memberUid",
+          "memberStrategy": {
+            "val": 1
+          }
+        },
+        {
+          "objClass": "groupOfUniqueNames",
+          "nameAttrName": "cn",
+          "memberAttrName": "uniqueMember",
+          "memberStrategy": {
+            "val": 2
+          }
+        },
+        {
+          "objClass": "organizationalUnit",
+          "nameAttrName": "ou",
+          "memberAttrName": "",
+          "memberStrategy": {
+            "val": 3
+          }
+        }
+      ]
+    },
+    {
+      "goid": "8c7f0d99fdc1cd9c616d2c1008942142",
+      "name": "sspLDAP",
+      "checksum": "cd6953caa192d2af44f7e882298dfc86f0c5020b",
+      "ldapUrls": [
+        "ldap://dir.cob.brc.com:389"
+      ],
+      "ldapsClientAuthEnabled": false,
+      "searchBase": "o=democorp,c=US",
+      "writable": false,
+      "bindDn": "cn=admin,o=democorp,c=US",
+      "bindPassword": "JEw3RXYwMiTlzu2U97QkyK9SPzbnizfy9pMa/eS2o8MLsS9S/kYYxQ==",
+      "userMappings": [
+        {
+          "objClass": "inetOrgPerson",
+          "nameAttrName": "cn",
+          "loginAttrName": "uid",
+          "passwdAttrName": "userPassword",
+          "firstNameAttrName": "givenName",
+          "lastNameAttrName": "sn",
+          "emailNameAttrName": "mail",
+          "kerberosAttrName": "uid",
+          "userCertAttrName": "userCertificate;binary",
+          "passwdType": {
+            "val": 0
+          }
+        }
+      ],
+      "groupMappings": [
+        {
+          "objClass": "posixGroup",
+          "nameAttrName": "cn",
+          "memberAttrName": "memberUid",
+          "memberStrategy": {
+            "val": 1
+          }
+        },
+        {
+          "objClass": "groupOfUniqueNames",
+          "nameAttrName": "cn",
+          "memberAttrName": "uniqueMember",
+          "memberStrategy": {
+            "val": 2
+          }
+        },
+        {
+          "objClass": "organizationalUnit",
+          "nameAttrName": "ou",
+          "memberAttrName": "",
+          "memberStrategy": {
+            "val": 3
+          }
+        }
+      ]
+    }
+  ],
+  "policyFragments": [
+    {
+      "goid": "6975522830b7415b2b387cdbf97b1e8f",
+      "guid": "521c4eac-e7b4-4a2e-b7de-f859fddb3e7b",
+      "name": "Add Audit",
+      "checksum": "314a769edb14f3aed5f66986289050688524fd56",
+      "folderPath": "/aFolder/subFolder1",
+      "soap": false,
+      "policy": {
+        "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<wsp:Policy xmlns:L7p=\"http://www.layer7tech.com/ws/policy\" xmlns:wsp=\"http://schemas.xmlsoap.org/ws/2002/12/policy\">\n    <wsp:All wsp:Usage=\"Required\">\n        <L7p:CommentAssertion>\n            <L7p:Comment stringValue=\"Policy Fragment: Add Audit\"/>\n        </L7p:CommentAssertion>\n        <L7p:AuditAssertion/>\n        <L7p:AuditDetailAssertion>\n            <L7p:Detail stringValue=\"&lt;cob> Audit trace - v${gateway.auditVersion}!\"/>\n            <L7p:Level stringValue=\"WARNING\"/>\n            <L7p:LoggingOnly booleanValue=\"true\"/>\n        </L7p:AuditDetailAssertion>\n    </wsp:All>\n</wsp:Policy>\n"
+      }
+    }
+  ]
+}
