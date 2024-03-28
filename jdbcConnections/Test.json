@@ -1,0 +1,18 @@
+{
+  "goid": "9bb69ea5a177e22269c734629dde924c",
+  "name": "Test",
+  "checksum": "64766a5bfc92a73610c79838f3bea7da18bf3707",
+  "enabled": true,
+  "driverClass": "com.l7tech.jdbc.mysql.MySQLDriver",
+  "jdbcUrl": "jdbc:mysql://192.168.1.60:3307/test",
+  "username": "test_user",
+  "password": "JEw3RXYwMiS2m/RylWO8looLNuv1XMqSkHzVDv0BRnwN5oSjFWTebA==",
+  "minPoolSize": 3,
+  "maxPoolSize": 15,
+  "properties": [
+    {
+      "name": "EnableCancelTimeout",
+      "value": "true"
+    }
+  ]
+}
